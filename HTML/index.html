@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<he>, initial-scale=1.0">
+    <meta http-equiv="X-UA-compatible" content="ie=edge">
+    <title>Exercícios html</title>
+    <style>
+        #conteúdo {
+            padding: 30px 0px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercícios HTML</h1>
+    </header>
+    <nav>
+        <a href="exercícios/teste.html">00 - Teste</a><br>
+        <a href="exercícios/texto1.html">01 - Texto 1</a><br>
+        <a href="exercícios/texto2.html">02 - Texto 2</a><br>
+        <a href="exercícios/listas.html">03- Listas</a><br>
+        <a href="exercícios/listaAninhada.html">04- Lista Aninhada</a><br>
+        <a href="exercícios/links.html">05- Links</a><br>
+        <a href="exercícios/tabela.html">06- Tabela</a><br>
+        <a href="exercícios/form/form.html">07- Formulário</a><br>
+        <a href="exercícios/imagens.html">08- Imagens</a><br>
+        <a href="exercícios/video.html">09- Vídeo</a><br>
+        <a href="exercícios/tagsNãoVisuais.html">10- Tags Não Visuais</a><br>
+
+    </nav>
+    <section id="conteúdo"></section>
+    <footer>
+        Curso de Web moderno
+    </footer>
+    <script>
+        document.querySelectorAll('[wm-nav]').forEach(link => {
+                const conteúdo = document.getElementById('conteúdo')
+            link.onclick = function(e) {
+                e.preventDefault()
+                
+                fetch(link.getAttribute('wm-nav'))
+                     .then(resp => resp.text())
+                     .then(html => conteúdo.innerHTML = html)
+            }
+        })
+    </script>
+</body>
+</html>

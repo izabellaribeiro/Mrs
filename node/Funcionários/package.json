@@ -1,0 +1,16 @@
+{
+  "name": "teste",
+  "version": "1.0.0",
+  "description": "teste",
+  "main": "Funcionários.js",
+  "scripts": {
+    "start": "nodemon",
+    "test": "teste"
+  },
+  "author": "",
+  "license": "ISC",
+  "keywords": [],
+  "dependencies": {
+    "axios": "^0.19.2"
+  }
+}
